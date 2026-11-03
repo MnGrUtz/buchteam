@@ -8,7 +8,7 @@
 - **Keine erfundenen Daten** (Namen, E-Mails, Titel, DOIs, ISBNs). Fehlend = `null`.
 - **Labels:** `[VERIFIED]` = extern bestätigt (ORCID/Google Scholar/OpenAlex/Inst.-Website).
 - **Hard Gates:** Ausschluss bei gleicher ORCID/Institution+Name/Co-Authorship (letzte 5 Jahre).
-- **Regionen:** Mind. **3 Regionen** abdecken (Europa, Nordamerika, Asien, Australien, Südamerika, Afrika).
+- **Regionen:** Mind. **3 Regionen** (Europa, Nordamerika, Asien, Australien, Südamerika, Afrika) **nur für Englisch-Sprachige Proposals (language: en)**.
 
 ---
 
@@ -22,6 +22,7 @@ Zielgruppe (Level: Bachelor/Master/PhD/Industrie; Sektoren)
 Konkurrenz (3–5 Titel mit Autor:in, Verlag, Jahr)
 Vorgeschlagene Reviewer:innen (Name + Institution)
 needs_industry: yes/no
+language: en/de
 ```
 
 ---
@@ -40,7 +41,7 @@ needs_industry: yes/no
 3. **OpenAlex:** Works mit Keywords (Filter: `publication_type: book, book-chapter`).
 4. **Vorgeschlagene Reviewer:innen:** Immer prüfen.
 
-**Regionale Fokussierung:**
+**Regionale Fokussierung (nur bei language: en):**
 - Nutze **regionale Datenbanken** für Unterrepräsentierte:
   - **Asien:** [J-STAGE](https://www.jstage.jst.go.jp/), [CNKI](https://www.cnki.net/)
   - **Australien:** [TROVE](https://trove.nla.gov.au/)
@@ -73,7 +74,7 @@ needs_industry: yes/no
 2. Mind. **4 Independent** (25 Punkte).
 3. Max. 2 Vorgeschlagene.
 4. Max. 1 Competitor-Autor.
-5. **Mind. 3 Regionen** (davon **1 aus Global South: Asien, Afrika, Südamerika, Australien**).
+5. **Mind. 3 Regionen (davon 1 Global South: Asien, Afrika, Südamerika, Australien) nur bei language: en**.
 6. Mind. 1 Industrie-Reviewer, falls `needs_industry: yes`.
 **Falls nicht erfüllbar:** Dokumentieren.
 
@@ -82,7 +83,7 @@ needs_industry: yes/no
 ## 📤 OUTPUT
 ```markdown
 # Reviewer-Matching für: [Titel]
-**Clusters:** [Prio-1-Cluster1], [Prio-1-Cluster2] | **Industrie:** [yes/no]
+**Clusters:** [Prio-1-Cluster1], [Prio-1-Cluster2] | **Language:** [en/de] | **Industrie:** [yes/no]
 
 ### PRIMARY SLATE (≤6)
 1. **[Name]** — [Institution], [Land] — **Score: [X] (Band: [..])**
@@ -99,7 +100,7 @@ needs_industry: yes/no
 
 ### SLATE AUDIT
 - Independent: [X]/≥4 | Suggested: [X]/≤2 | Competitor: [X]/≤1
-- **Regionen: [Liste] (Global South: [X])** | Industrie: [X]/≥1 (falls yes)
+- **Regionen: [Liste] (Global South: [X] nur bei language: en)** | Industrie: [X]/≥1 (falls yes)
 ```
 
 ---
@@ -108,7 +109,7 @@ needs_industry: yes/no
 - [ ] Keine erfundenen Daten.
 - [ ] Alle Scores berechnet.
 - [ ] Konflikte geprüft.
-- [ ] **Mind. 3 Regionen (davon 1 Global South)**.
+- [ ] **Mind. 3 Regionen (davon 1 Global South) nur bei language: en**.
 - [ ] Slate-Regeln erfüllt.
 - [ ] Industrie-Reviewer (falls `needs_industry: yes`).
 
